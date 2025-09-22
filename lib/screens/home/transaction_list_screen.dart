@@ -134,7 +134,7 @@ class _EditTransactionScreenState extends State<EditTransactionScreen> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     DropdownButtonFormField<TransactionType>(
-                      value: _selectedType,
+                      initialValue: _selectedType,
                       items: TransactionType.values.map((type) {
                         return DropdownMenuItem(
                           value: type,
@@ -175,7 +175,7 @@ class _EditTransactionScreenState extends State<EditTransactionScreen> {
                     ),
                     const SizedBox(height: 16),
                     DropdownButtonFormField<String>(
-                      value: _selectedCategory,
+                      initialValue: _selectedCategory,
                       items: const [
                         DropdownMenuItem(value: 'Makanan', child: Text('Makanan')),
                         DropdownMenuItem(value: 'Transportasi', child: Text('Transportasi')),

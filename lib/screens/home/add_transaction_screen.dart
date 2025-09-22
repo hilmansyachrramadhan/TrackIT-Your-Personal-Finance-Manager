@@ -121,7 +121,7 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
 
   Widget _buildDropdownType() {
     return DropdownButtonFormField<TransactionType>(
-      value: _selectedType,
+      initialValue: _selectedType,
       decoration: _inputDecoration(
         label: 'Jenis Transaksi',
         icon: _selectedType == TransactionType.income
@@ -146,7 +146,7 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
 
   Widget _buildCategoryDropdown() {
     return DropdownButtonFormField<String>(
-      value: _selectedCategory,
+      initialValue: _selectedCategory,
       decoration: _inputDecoration(label: 'Kategori', icon: Icons.category_rounded),
       items: const [
         DropdownMenuItem(value: 'Makanan', child: Text('Makanan')),
